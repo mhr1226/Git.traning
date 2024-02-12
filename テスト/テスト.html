@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>自己紹介</title>
+    <meta charset="UTF-8">
+    <!-- =文字コードの意味。基本的にこれが使用される -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ユーザー側の画面表示の設定。スマホやPCで同じ見え方になるようにするもの -->
+    <!-- width=width-device = デバイスの幅に合わせる設定 -->
+    <!-- initial-scale=1.0 = デバイスで表示される拡大比率の事。基本1.0 -->
+    <meta name="description" content="このサイトではまひろの自己紹介が見れます">
+    <!-- サイトの解説 表示されない事もあり（SEOの関係上） -->
+      <link rel="stylesheet" href="テスト.css">
+      <!-- CSSはlink jsはscriptタグで(<script src ="jsのファイル名"></script>) -->
+      <script src ="テスト.js" defer></script> 
+          <!-- deferとは？    読み込みを最適化＋jqueryを使用する際 or 
+            読み込む順番を考える際に役立つらしい -->
+
+          <!-- htmlは順番に読み込む為、async or defer 属性を使わない場合重たくなる事がある -->
+
+</head>
+<!-- メモ 後で書き入れたいが、必要か分からないコードをコメントとして記入してみる -->
+<body>
+  <header>
+
+    <!-- br = 改行; hr = 水平線 -->
+      <div class="infomation">
+        <h1>挨拶</h1>
+          <p>こんにちは！</p>
+          <p id="myName">僕はまひろです！</p>
+            <hr>
+      </div>
+      <!-- リストの練習 -->
+      <ol>
+        <li>やっほー</li>
+        <li>こんばんは</li>
+        <li>hello!!</li>
+        <li>こんばんは</li>
+        <li>おやすみなさい</li>
+      </ol>
+  </header>
+
+  <main>
+      
+      <!-- テーブルの練習 -->
+      <table border = "1">
+      <tr>
+        <th>1月1日</th>
+        <th>1月2日</th>
+        <th>1月3日</th>
+
+      </tr>
+      <tr>
+        <td>事実</td>
+        <td>反省</td>
+        <td>今後</td> 
+      </tr>
+    </table>
+      
+
+      <div class="favoriteFood">
+        <h1>好きな食べ物</h1>
+          <p>好きな食べ物はお刺身です</p>
+            <hr>
+      </div>
+  
+      <div>
+        <h1>今日の出来事</h1>
+          <p>今日はGitHubについて学びました。
+            <br>しかし、分からない事も多く躓く事も多くありました。
+              <hr>
+      </p>
+      </div>
+
+      <!-- 以下練習用のコメント有。コメントになっていれば消化済 -->
+
+
+  <!--alt属性の表示の仕方の練習
+    <img src="C:\Users\owner\Pictures" alt="うさぎの画像">
+  -->
+
+
+  <!-- 外部サイトの画像を絶対パスで表記する練習 
+    <img src = 
+    "https://terakoya.sejuku.net/static/media/logo.e144e8cb.svg" >-->
+
+    <img src="Rectangle.png">
+    <br>
+    <img src="GitHubサンプル.png"
+    
+    width="200" height="150">
+    
+    <!-- リンクの練習 
+      <a href="https://terakoya.sejuku.net/"></a>
+      侍テラコヤへ移動-->
+      <!-- リンクを使う時は別のhtmlファイルを読み込む事で、
+        サイト内での次のページを作成していく事が出来る -->
+      
+      
+      <!-- 画像付きリンクの練習 
+      <a href="画像リンクテスト用.html">
+        <img src="GitHubサンプル.png" alt="リンクテスト">
+      </a>
+    -->
+    
+    <!-- フォームの練習 -->
+    <form action="">
+      <!-- label for "" に加えて id,name属性をinput 
+        typeタグに入れる事で視認性が上がる -->
+        <!-- 視認性が上がるだけでなく、１つの概念にラベリングすることで
+          JSやCSS、データーベースへのアクセス時に要素を指定したい時に使える優れもの -->
+          <!-- idはHTML上での要素を識別するためのコードの為、forをidで代用するという記述はしない方がよさげ -->
+          <!-- id or class    を使用する際は、キャメルケース or スネークケースを使う -->
+          <!-- 以下キャメル・スネークケースの説明 
+
+            ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+          
+            キャメルケース（Camel Case）とスネークケース（Snake Case）は、プログラミングやコーディングの文脈で変数や関数、識別子などの命名規則に使われる方式です。これらの方式は主にプログラミング言語やコーディングスタイルにおいて、識別子を見やすく、一貫性を持たせるために利用されます。
+
+キャメルケース（Camel Case）:
+
+各単語の先頭を大文字で始め、単語を連結する形式です。
+最初の単語の頭文字も小文字または大文字で始めることがありますが、一貫性が重要です。
+具体例：
+
+myVariableName
+calculateTotalAmount
+getUserInfo
+スネークケース（Snake Case）:
+
+単語をアンダースコア _ で連結する形式です。
+通常、全ての単語を小文字で書きます。
+具体例：
+
+my_variable_name
+calculate_total_amount
+get_user_info
+
+これらのケースは、それぞれのプログラミング言語やプロジェクトの標準に基づいて採用されます。例えば、JavaやJavaScriptではキャメルケースが一般的に使用され、PythonやRubyではスネークケースがよく見られます。ただし、どちらを選ぶかは主観的なものであり、重要なのは一貫性を持っていることです。同じプロジェクト内で統一されたスタイルを使うことが重要です。
+        ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+-->
+          <label for="username">氏名</label>
+          <!-- type=textでテキストフォーマットが作れる -->
+          <input type ="text" id="username" name="username"  placeholder="名前を入力してください">
+
+          
+
+          <!-- idタグとclassタグの説明 -->
+          <!-- idは"個別の要素に対してCSSなどを適用したい時" -->
+          <!-- classは"複数の要素に対して・・・同上" -->
+          <!-- 数回しか使わない要素にはidを、何回も使う要素にはclassを -->
+          <!-- id,class共に数字や記号から始まるものは認識されない為注意 -->
+
+          <!-- place holder 属性：プレイスホルダーとは、テキストボックスに記入例を表示する機能のことです。
+          未記入のテキストボックスに薄い色で記入例を表示することで、
+          ユーザーが何を入力するべきなのかひと目でわかるようになります。 -->
+          <br>
+          <label for="userage">年代</label>
+          <select name="userage" id="userage">
+            <option value="1-10">10代以下</option>
+            <option value="20">20代</option>
+            <option value="30">30代</option>
+            <option value="40-">40代以上</option>
+          </select>
+        <br>
+        <div><label for="question">お問い合わせ<span class="bold">フォーム</span></label>
+        </div>
+        
+        <!-- cols = colummnsの略。列の作成が出来る。例：30なら30文字分 -->
+        <!--  rows = 行の事。例：10なら10行分 -->
+        <!-- テキストエリアはtextareaタグの使用 -->
+          <textarea name="question" id="question" 
+          cols="20" rows="3" ></textarea>
+          <!-- ボタンの作成にはradioタグを使用 -->
+          <div class="genderBox-left">
+            <label for="men">男性</label>
+          <input type="radio" name="gender" id="men">
+        <label for="woman">女性</label>
+          <input type="radio" name="gender" id="woman">
+        <label for="other">その他</label>
+          <input type="radio" name="gender" id="other"></div>
+          <!-- データベースで各内容を集計する時の記述は？ -->
+          <!-- チェックボックスはinput type="checkbox"で -->
+        <label for="conpla">利用規約に同意する</label>
+        <input type="checkbox">
+        <br>
+        <!-- 送信ボタンの作成（submit） valueは文字列 -->
+        <!-- フォームの送信先についても今後学習 -->
+        <input type="submit" value="送信">
+
+        <input type="reset" value="リセット">
+
+
+        
+          
+
+          <!-- .(class名)でdiv classタグのショートカットが作れる -->
+          <!-- #(id名)でdiv idが付けられる -->
+        <div class="name"></div>
+
+        <!-- 親タグと子タグの同時入力 ：入れ子構造にしたい時は 親タグ名>子タグ名とする事で作る事が出来る -->
+        <!-- まとめては書けない -->
+        <ul>
+          <li></li>
+        </ul>
+
+        <!--タグの連結 (タグ名)+(タグ名)...としていく事で複雑な構造のタグを一気に作れる -->
+        <!-- *にすると掛け算になり、複数タグ入れたい時に便利 -->
+        <div id="parent"> 
+          <p>テスト</p>
+            <div id="child">
+              <p>テスト2</p>
+            <div id="grandChild">
+              <p>テスト3</p>
+              </div>
+            </div>
+        </div>
+        
+        
+        <p></p>
+        <p></p>
+
+        <!-- 入れ子構造とタグの連結は併用可能 -->
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+        <!-- タグを（）で囲んで、#や.などのショートカットを織り交ぜる事も可能 -->
+        <!-- 記述例 ul>(li>a)+(li.*3)+(li#*3) -->
+        <ul>
+          <li><a href=""></a></li>
+          <li class=""></li>
+          <li class=""></li>
+          <li class=""></li>
+          <li id=""></li>
+          <li id=""></li>
+          <li id=""></li>
+          <li><a href=""></a></li>
+        </ul>
+
+        
+
+
+
+
+
+
+      </form>
+    
+  </main>
+  <footer>
+    <p>Copyright IITENKI inc. Copyright All rights reserved.</p>
+  </footer>
+  </body>
+</html>

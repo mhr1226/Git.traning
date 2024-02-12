@@ -1,0 +1,117 @@
+.title{
+  color:red;
+}
+.infomation h1{
+  color:#0000ff;
+}
+
+#parent > p{
+  background-color: aqua;
+  color: #99ac44;
+  line-height:4;
+  letter-spacing: 0.3em;
+}
+/* div要素の中のdivをまとめて処理したい場合は、上記のように親要素の中の子孫要素という意味合いでparent div divとすると、3つ目のdivに対してだけCSSが適用される。 */
+
+/* 親要素のpタグに対して（この場合はparent p）とすると、子要素にも適用される */
+
+/* それを防ぐ為には、親要素の中のpタグだけにCSSを適用させたい場合は、
+    （parent > p）と表現する事で、【parentタグの中のpタグだけに適用させるよー】
+    と指示を出す事が出来る */
+
+    /* 親要素の中の子要素の中のpタグにCSSを適用させたい場合は、
+    そもそも親要素名をセレクタに使わずに、子要素名をセレクタに使う */
+
+    /* これらの方法はあくまで親要素と子孫要素が存在する際に有効であり、
+    子孫要素がない状況では、通常通り(セレクタ名 プロパティ名)で対応すれば良い */
+
+/* ケースバイケースだが、毎回idやクラス名をつけなくても記述出来るから、コーディングが楽になるかも */
+
+body{
+  font-size: 25px;
+}
+
+/* 下記のように固有の属性タグにCSSを適用したい時は、
+    []で囲むようにしておく */
+#myName,.genderBox-left,.favoriteFood{
+  font-size: 5vw;
+  font-size: 3vh;
+  font-weight:bold;
+  text-align: left;
+  color:rgba(174, 0, 255,1);
+  margin: 30px;
+  line-height: 1;
+}
+
+label[for="question"]{
+  font-size: 30px;
+  font-family: serif;
+  /* font-familyには、連続して記述する事で、使えないフォントへの対応が出来る
+  例：AがダメならB、BもダメならCのように */
+  font-style: italic;
+  text-decoration: underline;
+  line-height: 2;
+  border-bottom: dotted 3px blue;
+  border-top: dashed 3px green;
+  border-left: solid 3px red;
+  border-right: double 3px blueviolet;
+  text-shadow: 2px 2px 4px pink;
+  /* text-shadow=影の右側 影の下側  影のぼけ具合  色 */
+
+}
+/* border:dotted =  点線
+  border:dashed = 破線
+  border:solid =  通常線
+  border:double = 二重線*/
+
+  .bold{
+  font-weight: bold;
+  }
+
+/* CSS値の学習
+
+●px
+文字自体の大きさ等を個別で規定する時に使える。反面、柔軟性がないため、他のデバイスでは上手く表示されない事も
+
+●em(%)
+親要素のフォントサイズに対しての割合で大きさを決めるもの。
+親要素に依存する為、pxでの表示問題はクリアできるが、下位要素が入ってくると記述が複雑になる。
+尚、％も意味合い的にはほぼ同じとなる。
+
+●rem
+root emの略称。根本のフォントサイズに対して反応する。
+根本とはhtmlタグ内全てに影響。
+htmlの基本フォントサイズは16pxになる為、特に指定がなければそれを基準とする。
+
+●VW
+ビューポートの略称。view port width（webサイト全体の横幅）に依存している。
+100%で横幅いっぱいになり、そこから調整が出来る。
+(現実的に使うなら、1~4VWくらい)
+親要素に依存しない為、個別で指定したい時に便利。
+（但し、pxである程度の大きさが分かれば、そこまで使わない？）
+
+幅が広くなる為、全体に影響を加えたい時は便利だが、古いブラウザでは使えない事も。
+
+●VH
+VWのheightバージョン。
+縦幅になるが、スマホの場合はアドレスバーの部分は押し出されて表示されるため微調整が必要。
+
+*/
+
+/* CSSのプロパティについて
+
+●RGB
+赤・緑・青の比率を変えられる。グラデーションっぽい色にしたい時
+透明度を入れたいのであればRGBAにする
+
+VS CODEの場合、適当な色を指定してから直感的に操作が可能
+
+●letter spacing
+文章の隙間を決められる。1emで1文字分開けることが出来る
+
+●text-decoration
+文字に下線等を敷くことが出来る
+underline
+overline(上線)
+line-through(取り消し線)*/
+
